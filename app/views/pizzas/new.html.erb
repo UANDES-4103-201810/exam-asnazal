@@ -30,7 +30,6 @@
 
 
 
-<!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/"><img src="/assets/home.png" width="70"></a>
@@ -73,14 +72,52 @@
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
         </div>
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <div class="dropdown">
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                  <li class="nav-item active">
+
+                  <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :style=> 'color:#ffffff;'%></li>
+
+                  </ul>
+                  </div>
+
+
+
+
+
+
+                <%else%>
+                  <a class="btn btn-info" style="color:#ffffff" href="/users/sign_in">Log in</a>
+
+
+                <%end%>
+                <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :style=> 'color:#ffffff;'%></li>
+
+                </ul>
+                </div>
+
+
+
+
+
+
+        <%else%>
+          <a class="btn btn-info" style="color:#ffffff" href="/users/sign_in">Log in</a>
+
+
+        <%end%>
 
 
 
         </li>
 
-      </ul>
+        </ul>
 
-    </div>
+        </div>
 
 
   </div>

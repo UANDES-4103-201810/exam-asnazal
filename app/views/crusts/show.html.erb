@@ -89,6 +89,9 @@
 <h2>your order contains:</h2>
 
 <%= @recp.name %> <h>pizza with </h> <%= @crust.tipo %> <h> crust</h>
+<div></div>
+<%= link_to 'Conitue', new_pizza_path(cid: @crust.id , rid: @rid  ) %>
+
 
 
 

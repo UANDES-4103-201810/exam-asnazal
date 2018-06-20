@@ -15,6 +15,10 @@ class PizzasController < ApplicationController
   # GET /pizzas/new
   def new
     @pizza = Pizza.new
+    @rid = params[:rid]
+    @cid = params[:cid]
+    @r = Recipe.find(params[:rid])
+    @c = Crust.find(params[:cid])
   end
 
   # GET /pizzas/1/edit
@@ -68,7 +72,8 @@ class PizzasController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def pizza_params
-      params.fetch(:pizza, {})
-    end
+    
+  def pizza_params
+    params.require(:pizza).permit( :name, :crust_id, :recipe_id)
+  end
 end

@@ -18,6 +18,7 @@ class CrustsController < ApplicationController
   # GET /crusts/new
   def new
     @crust = Crust.new
+    
   end
 
   # GET /crusts/1/edit

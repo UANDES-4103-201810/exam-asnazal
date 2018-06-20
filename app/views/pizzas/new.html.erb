@@ -1,5 +1,108 @@
-<h1>New Pizza</h1>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete Bootstrap 4 Website Layout</title>
 
-<%= render 'form', pizza: @pizza %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="style.css" rel="stylesheet">
 
-<%= link_to 'Back', pizzas_path %>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="/assets/home.png" width="70"></a>
+
+
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+
+
+        </li>
+        <div>
+
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        </div>
+
+
+
+      </ul>
+
+
+      <div>
+
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+      </div>
+
+
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="btn btn-info" style="color:#ffffff" href="/recipes">Menu</a>
+
+        </li>
+        <div>
+
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        </div>
+
+
+
+        </li>
+
+      </ul>
+
+    </div>
+
+
+  </div>
+</nav>
+
+
+<h1>Your Pizza</h1>
+
+
+<%=form_for @pizza, method: 'POST' do |xx| %>
+
+  <label for="cost1">your pizza is a  <%= @r.name %> with <%= @c.tipo %> crust? </label>
+
+  <p> <%= xx.hidden_field :crust_id, :value => @cid%></p>
+  <p> <%= xx.hidden_field :recipe_id, :value => @rid%></p>
+  <a class="btn btn-primary m-1"  role="button"><%= xx.submit %> </a>
+  </div>
+
+<%end%>
+<%= @r.name %>
+<%= @c.tipo %>
+
+<%= @rid %>
+<%= @cid %>
+

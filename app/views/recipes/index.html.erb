@@ -86,21 +86,29 @@
   </div>
 </nav>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.name %></td>
-        <td><%= link_to 'Show', recipe %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+
+
+
+<div class="container-fluid padding">
+
+  <div class="row padding">
+    <div class="col-md-2">
+      <div class="card">
+
+        <div class="card-body">
+
+          <% @recipes.each do |recipe| %>
+            <td>
+            </td><a class="navbar-brand" href="/"><img src="/assets/pizza.jpeg" width="150"></a>
+            <td><%= recipe.name %></td>
+            <td><%= link_to 'Show', recipe %></td>
+            </tr>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

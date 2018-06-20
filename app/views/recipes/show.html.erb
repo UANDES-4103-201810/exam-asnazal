@@ -90,6 +90,7 @@
   <h4 class="card-title">  <%= x.name %> </h4>
   <% end %>
   <div></div>
-  <a class="btn btn-info" style="color:#ffffff" href="/crusts">Add to cart</a>
+
+  <%= link_to 'choose crust', crusts_path(rid: @recipe.id ) %>
 
 

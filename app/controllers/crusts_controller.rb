@@ -5,11 +5,14 @@ class CrustsController < ApplicationController
   # GET /crusts.json
   def index
     @crusts = Crust.all
+    @rid = params[:rid]
   end
 
   # GET /crusts/1
   # GET /crusts/1.json
   def show
+    @rid = params[:rid]
+    @recp = Recipe.find(params[:rid])
   end
 
   # GET /crusts/new

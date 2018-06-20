@@ -94,10 +94,13 @@
   </thead>
 
   <tbody>
+
+
     <% @crusts.each do |crust| %>
       <tr>
         <td><%= crust.tipo %></td>
-        <td><%= link_to 'Show', crust %></td>
+        <td><%= link_to 'choose crust', crust_path(crust , rid: @rid) %></td>
+
       </tr>
     <% end %>
   </tbody>

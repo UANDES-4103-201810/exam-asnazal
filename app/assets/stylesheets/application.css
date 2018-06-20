@@ -13,3 +13,106 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+.jumbotron
+{background-color: #3E6BAB!important;
+    #display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.container{
+    margin:0 auto;
+
+}
+.table-dark{
+    background-color: #3E6BAB!important;
+
+}
+.list-group-item
+{
+    background-color: #13acbb!important;
+    width: 100px;
+    height: 50px;
+    transform: skew(20deg);
+
+}
+.btn-info{
+    background-color: #13acbb!important;
+
+}
+.btn-primary{
+    background-color: #13acbb!important;
+
+}
+.dropdown-menu{
+    background-color: #13acbb!important;
+
+}
+.nav-link{
+
+
+    color:transparent !important;
+
+}
+.card-body{
+    background-color: #3E6BAB!important;
+
+}
+.container-fluid{
+    margin: 0 auto ;
+
+}
+a:link{
+
+
+    color:#000000 !important;
+
+}
+a:hover{
+
+
+    color:transparent !important;
+
+}
+#notice_wrapper{
+    position: absolute;
+    top: 12%;
+    width: 100%;
+    z-index: 9999;
+    background:#13acbb;}
+.alert , .notice{
+    padding:2.5rem 0;
+    text-align: center;
+    margin: 0;
+    font-size:1.25rem;
+    font-weight:700;
+    color: #ffffff;
+    letter-spacing:1px;
+}
+
+
+a:link, a:visited {
+    background-color: #13acbb;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+
+
+#fundedp{
+    text-align: center;
+}
+
+.page-header{
+    text-align: left;
+    color:#ffffff;
+}
+
+.navbar-brand{
+    background-color:transparent ;
+}

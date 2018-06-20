@@ -4,6 +4,7 @@ class CreateRecipes < ActiveRecord::Migration[5.1]
       t.integer :price
 
 
+
       t.timestamps
     end
   end

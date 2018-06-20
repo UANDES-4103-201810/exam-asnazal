@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180620191514) do
+ActiveRecord::Schema.define(version: 20180620200827) do
 
   create_table "crusts", force: :cascade do |t|
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
+    t.string "tipo"
   end
 
   create_table "deliveries", force: :cascade do |t|
@@ -62,6 +64,7 @@ ActiveRecord::Schema.define(version: 20180620191514) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "users", force: :cascade do |t|

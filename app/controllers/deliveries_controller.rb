@@ -1,5 +1,7 @@
 class DeliveriesController < ApplicationController
   before_action :set_delivery, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [ :index]
+
 
   # GET /deliveries
   # GET /deliveries.json
@@ -71,4 +73,7 @@ class DeliveriesController < ApplicationController
     def delivery_params
       params.fetch(:delivery, {})
     end
+  def delivery_params
+    params.require(:delivery).permit( :line1, :line2, :number)
+  end
 end

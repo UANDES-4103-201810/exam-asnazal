@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [ :index]
+
 
   # GET /orders
   # GET /orders.json
@@ -15,6 +17,9 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @piid = params[:piid]
+    @did = params[:did]
+    @uid = params[:uid]
   end
 
   # GET /orders/1/edit

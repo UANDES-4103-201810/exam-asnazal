@@ -1,6 +1,5 @@
 class PizzasController < ApplicationController
   before_action :set_pizza, only: [:show, :edit, :update, :destroy]
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [ :index]
 
   # GET /pizzas
@@ -21,6 +20,7 @@ class PizzasController < ApplicationController
     @cid = params[:cid]
     @r = Recipe.find(params[:rid])
     @c = Crust.find(params[:cid])
+
   end
 
   # GET /pizzas/1/edit
